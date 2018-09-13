@@ -60,6 +60,8 @@ footer {
     color: white;
 }
 
+
+
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
     nav, article {
@@ -68,17 +70,21 @@ footer {
     }
 }
 
-/* Format User Input Table */
-label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: left;
+/* Table Settings */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
-input {
-  display: inline-block;
-  float: left;
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 
@@ -103,17 +109,33 @@ input {
   </nav>
   
   <article>
-    <h1>Get A Quote!</h1>
-    <div>
-      <label>Gallons Requested: </label><input type="text">
-      <label>Delivery Date: </label><input type = "text">
-      <label>Delivery Location: </label><input type="text">
-      <label>Delivery Contact Person Name: </label><input type="text">
-      <label>Delivery Contact Person Phone: </label><input type="text">
-      <label>Delivery Contact Person Email: </label><input type="text">
-      <label>Suggested Price per Gallon: </label><input type="text">
-      <label>Total Amount Due: </label><input type="text">
-  </div>
+    <h1>Quote History</h1>
+    <table>
+      <tr>
+        <th>Item #</th>
+        <th>Request Date</th>
+        <th>Delivery Date</th>
+        <th>Gallons</th>
+        <th>Rate</th>
+        <th>Total Price</th>
+      </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>  
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr> 
+    </table>
   </article>
 
 </section>
