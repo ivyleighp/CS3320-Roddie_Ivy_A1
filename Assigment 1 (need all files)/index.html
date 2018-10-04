@@ -9,6 +9,9 @@
     <meta name="description" content="Simplified Bootstrap template with sticky menu">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/sticky-menu.css" rel="stylesheet">
+  
+<script type="text/javascript" src="js/quotes.js"></script>
+
 </head>
 <style>
 /* Table Settings */
@@ -99,17 +102,28 @@ tr:nth-child(even) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Get A Quote</h1>                       
-                       <p><b>Gallons Requested: </b></label><input type="text"></p>
-                       <p><b>Delivery Date: </b><input type = "text"></p>
-                       <p><b>Delivery Location: </b><input type="text"></p>
-                       <p><b>Delivery Contact Person Name: </b><input type="text"></p>
-                       <p><b>Delivery Contact Person Phone: </b><input type="text"></p>
-                       <p><b>Delivery Contact Person Email: </b><input type="text"></p>
-                       <p><b>Suggested Price per Gallon: </b><input type="text"></p>
-                       <p><b>Total Amount Due: </b><input type="text"></p>  
-                       <input type="submit" value="Submit" align="right"><br><br>                     
-                    <a class="btn btn-primary page-scroll" href="#quote-history">Click To Scroll Down!</a>
+                 <h2>Get A Quote!</h2>
+                    <form name="order" id="order">
+                      <p><label for="gallonsReq">Gallons Requested:</label>
+                      <input id="gallonsReq" name="gallonsReq" title="Please enter only numerical characters" type="text"  /></p>
+                      <p><label for="deliveryDate">Delivery Date:</label>
+                      <input id="deliveryDate" name="deliveryDate" title="Enter mm/dd/yyyy" placeholder="mm/dd/yyy" /></p>
+                      <p><label for="deliveryLoc">Delivery Location:</label>
+                      <input id="deliveryLoc" name="deliveryLoc" title="Please enter only characters" /></p>           
+                      <p><label for="deliveryContactName">Delivery contact name:</label>
+                      <input id="deliveryContactName" name="deliveryContactName" title="Please enter only alphabetic characters" type="text" /></p>
+                      <p><label for="deliveryContactPhone">deliveryPhone</label>
+                      <input id="deliveryContactPhone" name="deliveyContactPhone" placeholder="xxx-xxx-xxxx" /></p>
+                      <p><label for="deliveryContactEmail">Delivery e-mail:</label>
+                      <input id="deliveryContactEmail" name="deliveryContactEmail" /></p>
+                      <p><label for="suggestedPrice">Suggested Price per Gallon:</label>
+                      <input id="suggestedPrice" name="suggestedPrice" /></p>
+                      <p><label for="totalAmountDue">Total Amount Due:</label>
+                      <input id="totalAmountDue" name="totalAmountDue" /></p>
+                      <p><input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset" />
+                      <button type="button" onClick="quoteHistory();"/>Submit</button></p>
+                    </form>                    
+                      <a class="btn btn-primary page-scroll" href="#quote-history">Click To Scroll Down!</a>
                 </div>
             </div>
         </div>
@@ -120,35 +134,20 @@ tr:nth-child(even) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">         
-                <h1>Quote History</h1>
-                <article>
-                   <table>
-                   <tr>
-                   <th>Item #</th>
-                   <th>Request Date</th>
-                   <th>Delivery Date</th>
-                   <th>Gallons</th>
-                   <th>Rate</th>
-                   <th>Total Price</th>
-                 </tr>
-                   <tr>
-                   <td> </td>
-                   <td> </td>
-                   <td> </td>
-                   <td> </td>
-                   <td> </td>
-                   <td> </td>
-                 </tr>  
-                   <tr>
-                   <td> </td>
-                   <td> </td>
-                   <td> </td>
-                   <td> </td>
-                   <td> </td>
-                   <td> </td>
-                 </tr> 
-                   </table>
-                </article>
+       <h2 align="center">Quote History</h2>
+       <table id="results">
+         <thead>
+         <tr>
+            <th>Item #</th>
+            <th>Request Date</th>
+            <th>Delivery Date</th>
+            <th>Gallons</th>
+            <th>Rate</th>
+            <th>Total Price</th>
+         </tr>
+         </thead>
+      </table>
+
                 </div>
             </div>
         </div>
