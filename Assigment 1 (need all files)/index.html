@@ -9,7 +9,7 @@
     <meta name="description" content="Simplified Bootstrap template with sticky menu">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/sticky-menu.css" rel="stylesheet">
-  
+
 <script type="text/javascript" src="js/quotes.js"></script>
 
 </head>
@@ -109,7 +109,7 @@ tr:nth-child(even) {
                       <p><label for="deliveryDate">Delivery Date:</label>
                       <input id="deliveryDate" name="deliveryDate" title="Enter mm/dd/yyyy" placeholder="mm/dd/yyy" /></p>
                       <p><label for="deliveryLoc">Delivery Location:</label>
-                      <input id="deliveryLoc" name="deliveryLoc" title="Please enter only characters" /></p>           
+                      <input id="deliveryLoc" name="deliveryLoc" title="Please enter only characters" /></p>
                       <p><label for="deliveryContactName">Delivery contact name:</label>
                       <input id="deliveryContactName" name="deliveryContactName" title="Please enter only alphabetic characters" type="text" /></p>
                       <p><label for="deliveryContactPhone">Delivery Phone</label>
@@ -122,8 +122,8 @@ tr:nth-child(even) {
                       <input id="totalAmountDue" name="totalAmountDue" /></p>
                       <p><input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset" />
                       <button type="button" onClick="quoteHistory();"/>Submit</button></p>
-                    </form>                    
-                      <a class="btn btn-primary page-scroll" href="#quote-history">Click To Scroll Down!</a>
+                    </form>
+                      <a class="btn btn-primary page-scroll" href="#quote-history" type="submit">Click To Scroll Down!</a>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@ tr:nth-child(even) {
     <section id="quote-history" class="history-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">         
+                <div class="col-lg-12">
        <h2 align="center">Quote History</h2>
        <table id="results">
          <thead>
@@ -147,14 +147,19 @@ tr:nth-child(even) {
          </tr>
          </thead>
       </table>
-
                 </div>
             </div>
         </div>
+        </div>
     </section>
-	
+
 	<a id="back2Top" title="Back to top" href="#">&#10148;</a>
-	
+
+    <footer>
+         <p>Copyright 2018Frederik Powell</p>
+         <p>Used a premade layout provided by third party site</p>
+    </footer>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -168,10 +173,6 @@ tr:nth-child(even) {
     <!-- Client Information JavaScript -->
     <script src="js/clientInformation.js"></script>
 
-    <footer>
-         <p>Copyright 2018Frederik Powell</p>
-         <p>Used a premade layout provided by third party site</p>
-    </footer>
 
 </body>
 
