@@ -106,7 +106,7 @@ tr:nth-child(even) {
                  <h2>Get A Quote!</h2>
                  <iframe name="hiddenFrame" class="hide"></iframe>
 
-                      <form name="order" id="order" method="post" target="hiddenFrame">
+                      <form name="order" id="order" method="post" target="hiddenFrame" onsubmit="return validateForm()">
                       <p><label for="gallonsReq">Gallons Requested:</label>
                       <input id="gallonsReq" name="gallonsReq" title="Please enter only numerical characters" type="text"  /></p>
                       <p><label for="deliveryDate">Delivery Date:</label>
@@ -124,6 +124,7 @@ tr:nth-child(even) {
                       <p><label for="totalAmountDue">Total Amount Due:</label>
                       <input id="totalAmountDue" name="totalAmountDue" /></p>
                       <p><input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset" />
+                      <button type ="submit"> Validate Form </button>   
                       <button type="submit" value="Save" onClick="quoteHistory();"/>Submit</button></p>
                     </form>
                       <a class="btn btn-primary page-scroll" href="#quote-history" type="submit">Click To Scroll Down!</a>

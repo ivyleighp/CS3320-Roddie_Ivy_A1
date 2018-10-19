@@ -1,3 +1,14 @@
+function validateForm() {
+  var GALSR = document.forms["order"]["gallonsReq"].value;
+  if (GALSR < 100) {
+    alert("Gallons requested must be over 100");
+    return false;
+  }
+  alert("You may proceed to Sumbit");
+}
+
+
+
 function randomDate(start, end) {
 var d =  new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
   return d.toDateString();
