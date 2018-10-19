@@ -4,10 +4,10 @@ var d =  new Date(start.getTime() + Math.random() * (end.getTime() - start.getTi
 }
 
 
-  //  var storage = [];
+    var storage = [];
 function quoteHistory() {
 
-        var clientID = Math.floor((Math.random()*10000)+1);
+        var clientID = Math.floor((Math.random()*1000)+1);
         var gallonsReq = document.getElementById("gallonsReq").value;
         var deliveryDate = randomDate(new Date(2024, 0, 1), new Date());
         var requestDate = randomDate(new Date(2018, 0, 1), new Date());
@@ -17,8 +17,7 @@ function quoteHistory() {
         var deliveryContactEmail = "jerry@yhdkl.com";
         var suggestedPrice = document.getElementById("suggestedPrice").value;
         var totalAmountDue = document.getElementById("totalAmountDue").value;
-        var table=document.getElementbyId("results");
-
+        var table=document.getElementById("results");
         var quote = [];
 
         quote[clientID] = {
@@ -35,7 +34,7 @@ function quoteHistory() {
        storage.push(quote);
 
 
-
+        var row=table.insertRow(-1);
         var cell1=row.insertCell(0);
         var cell2=row.insertCell(1);
         var cell3=row.insertCell(2);
@@ -49,7 +48,6 @@ function quoteHistory() {
         cell4.innerHTML=gallonsReq;
         cell5.innerHTML=suggestedPrice;
         cell6.innerHTML=totalAmountDue;
-
     }
 
 function hardcodeQuotes(){
