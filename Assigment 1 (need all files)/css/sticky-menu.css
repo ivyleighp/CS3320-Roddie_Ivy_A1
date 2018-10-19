@@ -45,24 +45,28 @@ html {
 .welcome-section {
     height: 100%;
     padding-top: 150px;
+    padding-bottom: 50px;
     text-align: center;
     background: #fff;
 }
 .info-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: left;
     background: #99b998;
 }
 .getquote-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: right;
     background: #fff;
 }
 .history-section {
-    height: 100%;
-    padding-top: 150px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
     background: #99b998;
 }
@@ -77,6 +81,3 @@ html {
 .navbar-default .navbar-nav > li > a {
     color: #000;
 }
-
-
-
