@@ -1,0 +1,30 @@
+{
+  "name": "mqsql-crud-app",
+  "version": "1.0.0",
+  "description": "Internet Software Development Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^0.4.0",
+    "global": "^4.3.2",
+    "mysql": "^2.16.0",
+    "req-flash": "0.0.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivyleighp/CS3320-Roddie_Ivy_A1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ivyleighp/CS3320-Roddie_Ivy_A1/issues"
+  },
+  "homepage": "https://github.com/ivyleighp/CS3320-Roddie_Ivy_A1#readme"
+}
