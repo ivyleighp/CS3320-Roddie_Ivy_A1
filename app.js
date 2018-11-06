@@ -1,7 +1,6 @@
 //using express.js just because it's relatively user friendly
 const express = require('express')
-const fileUpload = require('express-fileupload');
-const bodyParser = require('body-parser');
+
 
 
 //making the express object that will be used to control our server
@@ -27,22 +26,6 @@ app.use(express.static('src'))
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/public/html/index.html'));
 });
-
-
-// configure middleware
-app.set('port', process.env.port || port); // set express to use this port
-app.set('views', __dirname + '/views'); // set express to look in this folder to render our view
-app.set('view engine', 'ejs'); // configure template engine
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json()); // parse form data client
-app.use(express.static(path.join(__dirname, 'public'))); // configure express to use public folder
-app.use(fileUpload()); // configure fileupload
-
-// set the app to listen on the port
-app.listen(port, () => {
-    console.log(`Server running on port: ${port}`);
-});
-
 
 
 //telling the server to listen on the assigned port
