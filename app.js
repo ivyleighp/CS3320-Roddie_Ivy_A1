@@ -2,7 +2,6 @@
 const express = require('express')
 const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
 
 
 //making the express object that will be used to control our server
@@ -29,7 +28,6 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/public/html/index.html'));
 });
 
-golbal.db = db;
 
 // configure middleware
 app.set('port', process.env.port || port); // set express to use this port
