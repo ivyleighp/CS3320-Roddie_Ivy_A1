@@ -124,7 +124,7 @@ tr:nth-child(even) {
                       <p><label for="totalAmountDue">Total Amount Due:</label>
                       <input type="number" min="0.00" max="99999999.00" step="0.01" id="totalAmountDue" name="totalAmountDue" required /></p>
                       <p><input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset" />
-                      <button type="submit" value="Save" />Submit</button></p>
+                      <button type="submit" value="Save" onClick="quoteHistory();"/>Submit</button></p>
                     </form>
                       <a class="btn btn-primary page-scroll" href="#quote-history" type="submit">Click To Scroll Down!</a>
                 </div>
@@ -183,7 +183,6 @@ tr:nth-child(even) {
        });
      </script> -->
     <!-- Bootstrap Core JavaScript -->
-    <script src="demo_db_connection.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
