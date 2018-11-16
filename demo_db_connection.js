@@ -7,18 +7,22 @@ const app = express();
 
 const port = 5000;
 
-var db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "123adjr!",
-  database: 'cs3320'
+
+
+var mysql = require('mysql');
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+connection.connect();
+
+connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log('The solution is: ', rows[0].solution);
 });
 
-db.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
-golbal.db = db;
+connection.end();
+
+
 
 // configure middleware
 app.set('port', process.env.port || port); // set express to use this port

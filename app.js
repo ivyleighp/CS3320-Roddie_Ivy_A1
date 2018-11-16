@@ -17,8 +17,7 @@ var port = process.env.PORT || 8080;
 //telling express to serve everything in the public directory so we can use it on the page
 //public contains html and css folders/code
 app.use(express.static('public'))
-//same thing for src directory, to serve javascript
-app.use(express.static('src'))
+
 
 //basic response for the homepage, basic url '/'', sending the main.html file, which loads the 
 //CSS and JS in /public/ and /src/
