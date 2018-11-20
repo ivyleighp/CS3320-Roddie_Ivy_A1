@@ -1,4 +1,4 @@
-Run command prompt:
+Run command prompt in project dir:
 
 ' nodemon app.js '
 
