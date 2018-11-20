@@ -21,11 +21,10 @@ module.exports = {
         let phone = req.body.phone;
         let email = req.body.email;
 
-        let addressQuery = "SELECT * FROM `clientInformation` WHERE fullName = '" + fullName + "'";
+        let fullNameQuery = "SELECT * FROM `clientInformation` WHERE address = '" + address + "'";
 
-        db.query(addressQuery, (err, result) => {
+        db.query(fullNameQuery, (err, result) => {
             if (err) {
-
                 return res.status(500).send(err);
             }
             if (result.length > 0) {
@@ -40,7 +39,7 @@ module.exports = {
                             fullName + "', '" + address + "', '" + city + "', '" + state + "', '" + zipCode + "', '" + phone + "', '" + email + "')";
                         db.query(query, (err, result) => {
                             if (err) {
-                                return res.redirect('/add');
+                                return res.status(500).send(err);
                             }
                             res.redirect('/');
                         });
@@ -75,7 +74,6 @@ module.exports = {
         db.query(query, (err, result) => {
             if (err) {
                 return res.status(500).send(err);
-                res.redirect('/edit/');
             }
             res.redirect('/');
         });

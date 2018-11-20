@@ -8,7 +8,7 @@ const app = express();
 const {getHomePage} = require('./routes/index');
 const {addClientPage, addClient, deleteClient, editClient, editClientPage} = require('./routes/client');
 //, addQuotePage, addQuote, deleteQuote, editQuote, editQuotePage
-const port = 5000;
+const port = 8080;
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
@@ -36,7 +36,7 @@ app.set('view engine', 'ejs'); // configure template engine
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // parse form data client
 app.use(express.static(path.join(__dirname, 'public'))); // configure express to use public folder
-
+app.use(fileUpload()); // configure fileupload
 
 // routes for the app
 
