@@ -1,0 +1,47 @@
+<% include partials/header.ejs %>
+    <div class="table-wrapper">
+        <% if (quote.length > 0) {%>
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Item #</th>
+                        <th scope="col">Gallons Requested</th>
+                        <th scope="col">Request Date</th>
+                        <th scope="col">Delivery Date</th>
+                        <th scope="col">Delivery Address</th>
+                        <th scope="col">Delivery Contact Name</th>
+                        <th scope="col">Delivery Contact Phone</th>
+                        <th scope="col">Delivery Contact Email</th>
+                        <th scope="col">Suggested Price</th>
+                        <th scope="col">Total Amount Due</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% quote.forEach((quote, index) => { %>
+                        <tr>
+                            <th scope="row"><%= quote.quoteId  %></th>
+                            <td><%= quote.gallonsRequested  %></td>
+                            <td><%= quote.requestDate %></td>
+                            <td><%= quote.deliveryDate %></td>
+                            <td><%= quote.deliveryAddress  + " " + quote.deliveryCity + ", " + quote.deliveryState + " " + quote.deliveryZipCode %></td>
+                            <td><%= quote.deliveryContactName %></td>
+                            <td><%= quote.deliveryContactPhone  %></td>
+                            <td><%= quote.deliveryContactEmail  %></td>
+                            <td><%= quote.suggestedPrice  %></td>
+                            <td><%= quote.totalAmountDue  %></td>
+                            <td>
+                                <a href="/editQ/<%= quote.quoteId %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+                                <a href="/deleteQ/<%= quote.quoteId %>" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">No Quote found. Go <a href="/addQ" >here</a> to add quotes.</p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>

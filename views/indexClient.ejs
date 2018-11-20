@@ -7,9 +7,6 @@
                         <th scope="col">Client ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Address</th>
-                        <th scope="col">City</th>
-                        <th scope="col">State</th>
-                        <th scope="col">Zipcode</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
                         <th scope="col">Action</th>
@@ -20,10 +17,7 @@
                         <tr>
                             <th scope="row"><%= client.clientId %></th>
                             <td><%= client.fullName %></td>
-                            <td><%= client.address %></td>
-                            <td><%= client.city %></td>
-                            <td><%= client.state %></td>
-                            <td><%= client.zipCode %></td>
+                            <td><%= client.address +" " + client.city + ", " + client.state + " " + client.zipCode %></td>
                             <td><%= client.phone %></td>
                             <td><%= client.email %></td>
                             <td>

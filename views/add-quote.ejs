@@ -1,0 +1,78 @@
+<% include partials/header.ejs %>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-client-form" action="" method="post" enctype="multipart/form-data">
+          <div class="form-group col-md-4">
+            <p><label for="clientId">CLient Id</label>
+              <input type="number" class="form-control" name="clientId" id="clientId" placeholder="Client ID" required>
+          </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="gallonsRequested">Gallons Requested</label>
+                    <input type="number" class="form-control" name="gallonsRequested" id="gallonsRequested" placeholder="Req Gallons" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="requestDate">Request Date</label>
+                    <input type="datetime-local" class="form-control" name="requestDate" id="requestDate" placeholder="Req date" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <p><label for="deliveryDate">Delivery Date</label>
+                    <input type="datetime-local" class="form-control" name="deliveryDate" id="deliveryDate" placeholder="Delivery Date" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="deliveryAddress">Delivery Address</label>
+                    <input type="text" class="form-control" name="deliveryAddress" id="deliveryAddress" placeholder="Delivery Address"  required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="deliveryCity">Delivery City</label>
+                    <input type="text" class="form-control name-valid" name="deliveryCity" id="deliveryCity" placeholder="Delivery City" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="deliveryState">Delivery State</label>
+                    <input type="text" class="form-control name-valid" name="deliveryState" id="deliveryState" placeholder="Delivery State" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="deliveryZipCode">Delivery ZipCode</label>
+                    <input type="number" class="form-control" name="deliveryZipCode" id="deliveryZipCode" placeholder="Delivery ZipCode" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="deliveryContactName">Delivery Contact Name</label>
+                    <input type="text" class="form-control name-valid" name="deliveryContactName " id="deliveryContactName" placeholder="Delivery Name" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="deliveryContactPhone">Delivery Contact Phone</label>
+                    <input type="phone" class="form-control" name="deliveryContactPhone" id="deliveryContactPhone" placeholder="Delivery Phone #" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="deliveryContactEmail">Delivery Contact Email</label>
+                    <input type="email" class="form-control" name="deliveryContactEmail" id="deliveryContactEmail" placeholder="Delivery E-mail" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="suggestedPrice">Suggested Price</label>
+                    <input type="number" class="form-control" name="suggestedPrice" id="suggestedPrice" placeholder="Suggested Price" required>
+                </p></div>
+                <div class="form-group col-md-4">
+                  <p><label for="totalAmountDue">Total Amount Due</label>
+                    <input type="number" class="form-control" name="totalAmountDue" id="totalAmountDue" placeholder="Total amount" required>
+                </p></div>
+            <button type="submit" class="btn btn-primary float-right">Add Quote</button>
+        </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+           $('.name-valid').on('keypress', function(e) {
+            var regex = new RegExp("^[a-zA-Z ]*$");
+            var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+            if (regex.test(str)) {
+               return true;
+            }
+            e.preventDefault();
+            return false;
+           });
+          });
+</script>
+</body>
+</html>

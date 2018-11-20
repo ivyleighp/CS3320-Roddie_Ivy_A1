@@ -6,8 +6,10 @@ const path = require('path');
 const app = express();
 
 const {getHomePage} = require('./routes/index');
+const {getQuoteHomePage} = require('./routes/indexQ');
 const {addClientPage, addClient, deleteClient, editClient, editClientPage} = require('./routes/client');
-//, addQuotePage, addQuote, deleteQuote, editQuote, editQuotePage
+const {addQuotePage, addQuote, deleteQuote, editQuote, editQuotePage} = require('./routes/quote');
+
 const port = 8080;
 
 // create connection to database
@@ -46,13 +48,13 @@ app.get('/edit/:clientId', editClientPage);
 app.get('/delete/:clientId', deleteClient);
 app.post('/add', addClient);
 app.post('/edit/:clientId', editClient);
-/*
-app.get('/add', addQuotePage);
-app.get('/edit/:id', editQuotePage);
-app.get('/delete/:id', deleteQuote);
-app.post('/add', addQuote);
-app.post('/edit/:id', editQuote);
-*/
+app.get('/QuoteHistory', getQuoteHomePage);
+app.get('/addQ', addQuotePage);
+app.get('/editQ/:quoteId', editQuotePage);
+app.get('/deleteQ/:quoteId', deleteQuote);
+app.post('/addQ', addQuote);
+app.post('/editQ/:quoteId', editQuote);
+
 
 
 // set the app to listen on the port

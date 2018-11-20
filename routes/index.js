@@ -7,7 +7,7 @@ module.exports = {
             if (err) {
                 res.redirect('/');
             }
-            res.render('index.ejs', {
+            res.render('indexClient.ejs', {
                 title: "Welcome to fuel | View Clients"
                 ,client: result
             });
