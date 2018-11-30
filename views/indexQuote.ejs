@@ -30,6 +30,10 @@
                             <td><%= quote.deliveryContactEmail  %></td>
                             <td><%= quote.suggestedPrice  %></td>
                             <td><%= quote.totalAmountDue  %></td>
+                            <td>
+                                <a href="/editQ/<%= quote.quoteId %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+                                <a href="/deleteQ/<%= quote.quoteId %>" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
                         </tr>
                     <% }) %>
                 </tbody>
