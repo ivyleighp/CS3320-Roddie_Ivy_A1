@@ -65,7 +65,7 @@ app.listen(port, () => console.log(`App listening on port ${port}!`))
 app.use(function (req, res, next) {
   res.status(404).send("Sorry, page doesn't exist!")
 })
-/*
+
 var mysql = require('mysql');
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
@@ -78,9 +78,7 @@ connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 });
 
 connection.end();
-*/
 
-/*
 // configure middleware
 app.set('port', process.env.port || port); // set express to use this port
 app.set('views', __dirname + '/views'); // set express to look in this folder to render our view
@@ -112,5 +110,3 @@ app.post('/editQ/:quoteId', editQuote);
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 });
-
-*/
