@@ -1,36 +1,20 @@
-
-
 {
-  "name": "CS3320_Roddie_Ivy_A1",
+  "name": "CS3320-Roddie_Ivy_A1",
   "version": "1.0.0",
-  "description": "Internet Software Development Assignment",
-  "main": "index.js",
+  "description": "school project",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Powell Frederik",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-fileupload": "^0.4.0",
-    "global": "^4.3.2",
+    "express-fileupload": "^1.0.0",
     "mysql": "^2.16.0",
     "req-flash": "0.0.3"
-  },
-  "devDependencies": {
-  "express": "^4.16.3",
-  "path": "^0.12.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ivyleighp/CS3320-Roddie_Ivy_A1.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ivyleighp/CS3320-Roddie_Ivy_A1/issues"
-  },
-  "homepage": "https://github.com/ivyleighp/CS3320-Roddie_Ivy_A1#readme"
+  }
 }
