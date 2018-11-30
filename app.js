@@ -10,25 +10,50 @@ const {getQuoteHomePage} = require('./routes/indexQ');
 const {addClientPage, addClient, deleteClient, editClient, editClientPage} = require('./routes/client');
 const {addQuotePage, addQuote, deleteQuote, editQuote, editQuotePage} = require('./routes/quote');
 
-const port = 8080;
+//const port = 8080
+
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
+/*
 const db = mysql.createConnection ({
   host: "localhost",
   user: "root",
   password: "123adjr!",
   database: 'cs3320'
 });
-
+*/
 // connect to database
-db.connect((err) => {
+/* db.connect((err) => {
     if (err) {
         throw err;
     }
     console.log('Connected to database');
 });
-global.db = db;
+global.db = db; */
+
+
+var baseUrl = "https://a1-ivy-roddie.herokuapp.com/"
+
+const herokuClient = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+herokuClient.connect();
+
+var mysql = require('mysql');
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+connection.connect();
+
+connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log('The solution is: ', rows[0].solution);
+});
+
+connection.end();
 
 // configure middleware
 app.set('port', process.env.port || port); // set express to use this port
